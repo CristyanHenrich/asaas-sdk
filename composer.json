@@ -1,0 +1,30 @@
+{
+    "name": "cristyanhenrich/asaas-sdk",
+    "description": "Library to connect assas api",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Cristyanhenrich\\AsaasSdk\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Cristyan Henrich",
+            "email": "cristyanhenrich16@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "guzzlehttp/guzzle": "^7.4"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Cristyanhenrich\\AsaasSdk\\Providers\\AsaasServiceProvider"
+            ],
+            "aliases": {
+                "Asaas": "Cristyanhenrich\\AsaasSdk\\Facades\\Asaas"
+            }
+        }
+    }
+}
