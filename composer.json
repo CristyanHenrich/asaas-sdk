@@ -2,6 +2,7 @@
     "name": "cristyanhenrich/asaas-sdk",
     "description": "Library to connect assas api",
     "type": "library",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Cristyanhenrich\\AsaasSdk\\": "src/"
