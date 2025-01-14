@@ -51,4 +51,20 @@ class PixService
             return json_decode($e->getResponse()->getBody(), true);
         }
     }
+
+    /**
+     * Cria uma cobranca pix estatica.
+     *
+     * @param array $data Dados da cobranca
+     * @return array Resposta da API
+     * @throws \Exception Se ocorrer um erro.
+     */
+    public function createPixStaticCharge(array $data): array
+    {
+        try {
+            return $this->httpClient->post('pix/qrCodes/static', $data);
+        } catch (\Exception $e) {
+            return json_decode($e->getResponse()->getBody(), true);
+        }
+    }
 }

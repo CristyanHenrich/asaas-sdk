@@ -82,6 +82,18 @@ use Illuminate\Support\Facades\Facade;
  *
  * @method static array createRandomPixKey() Cria uma chave pix aleatória.
  *
+ * @method static array createPixStaticCharge(array $data) Cria uma cobrança PIX estática.
+ *
+ *   Campos disponíveis:
+ *  - addressKey: string - Chave PIX.
+ *  - description: string - Descrição da cobrança.
+ *  - value: number - Valor da cobrança.
+ *  - format: string - Formato do QR Code (ALL, IMAGE, PAYLOAD).
+ *  - expirationDate: date-time - Data de expiração da cobrança.
+ *  - expirationSeconds: int32 - Tempo de expiração da cobrança em segundos.
+ *  - allowsMultiplePayments: bool - Permite pagamentos múltiplos.
+ *  - externalReference: string - Referência externa.
+ *
  * Métodos de Cobranças:
  * @method static array createCharge(array $data) Cria uma cobrança.
  *
