@@ -193,6 +193,8 @@ use Illuminate\Support\Facades\Facade;
  *
  * @method static array getChargeById(string $id) Busca uma cobrança pelo ID.
  *
+ * @method static array getChargeStatusById(string $id) Busca o status de uma cobrança pelo ID.
+ *
  * Métodos de Assinaturas:
  * @method static array createSubscription(array $data) Cria uma assinatura.
  *

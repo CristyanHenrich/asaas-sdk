@@ -98,4 +98,20 @@ class ChargeService
             return json_decode($e->getResponse()->getBody(), true);
         }
     }
+
+    /**
+     * Pega o status de uma cobrança.
+     *
+     * @param string $id ID da cobrança.
+     * @return array Resposta da API
+     * @throws \Exception Se ocorrer um erro.
+     */
+    public function getChargeStatusById(string $id): array
+    {
+        try {
+            return $this->httpClient->get("payments/{$id}/status");
+        } catch (\Exception $e) {
+            return json_decode($e->getResponse()->getBody(), true);
+        }
+    }
 }
