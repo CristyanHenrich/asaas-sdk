@@ -191,6 +191,8 @@ use Illuminate\Support\Facades\Facade;
  *
  * @method static array getBoletoBarcode(string $id) Pega o código de barras de um boleto.
  *
+ * @method static array getChargeById(string $id) Busca uma cobrança pelo ID.
+ *
  * Métodos de Assinaturas:
  * @method static array createSubscription(array $data) Cria uma assinatura.
  *
