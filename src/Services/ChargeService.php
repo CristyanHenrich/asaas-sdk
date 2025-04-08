@@ -52,6 +52,22 @@ class ChargeService
     }
 
     /**
+     * Pega o código de barras de um boleto.
+     *
+     * @param string $id ID da cobrança.
+     * @return array Resposta da API
+     * @throws \Exception Se ocorrer um erro.
+     */
+    public function getBoletoBarcode(string $id): array
+    {
+        try {
+            return $this->httpClient->get("payments/{$id}/identificationField");
+        } catch (\Exception $e) {
+            return json_decode($e->getResponse()->getBody(), true);
+        }
+    }
+
+    /**
      * Lista todas as cobranças.
      *
      * @param array $query Parâmetros de consulta opcionais

@@ -189,6 +189,8 @@ use Illuminate\Support\Facades\Facade;
  * - dueDate[le]: string (opcional) - Filtrar até a data de vencimento final
  * - user: string (opcional) - Filtrar pelo endereço de e-mail do usuário que criou a cobrança
  *
+ * @method static array getBoletoBarcode(string $id) Pega o código de barras de um boleto.
+ *
  * Métodos de Assinaturas:
  * @method static array createSubscription(array $data) Cria uma assinatura.
  *
